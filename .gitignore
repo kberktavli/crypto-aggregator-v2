@@ -1,0 +1,9 @@
+# Docker veritabanı dosyaları (Bunu ASLA yükleme, çok şişirir)
+data/
+
+# IDE dosyaları (VS Code vs)
+.vscode/
+.idea/
+
+# Go derleme çıktıları
+main

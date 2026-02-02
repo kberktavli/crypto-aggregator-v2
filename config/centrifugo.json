@@ -1,0 +1,18 @@
+{
+  "token_hmac_secret_key": "my_secret_token_key",
+  "admin": "true",
+  "admin_password": "admin",
+  "admin_secret": "admin_secret",
+  "api_key": "my_api_key",
+  "allowed_origins": [
+    "*"
+  ],
+  "namespaces": [
+    {
+      "name": "public",
+      "publish": true,
+      "subscribe_to_publish": true,
+      "anonymous": true
+    }
+  ]
+}
