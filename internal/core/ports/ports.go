@@ -15,6 +15,8 @@ type CandleRepository interface {
 type EventBus interface {
 	PublishCandle(candle domain.Candle) error
 	PublishSignal(signal domain.TradeSignal) error
+
+	PublishWallet(update domain.WalletUpdate) error
 }
 
 // ---Driving Ports(Gelenler/Giriş Kapıları)---
@@ -25,6 +27,11 @@ type EventBus interface {
 type TradingService interface {
 	// Dışarıdan yeni bir mum geldiginde bu çalışacak.
 	ProcessIncomingCandle(candle domain.Candle) error
+}
+
+type WalletRepository interface {
+	GetWallet() (*domain.Wallet, error)
+	UpdateWallet(wallet domain.Wallet) error
 }
 
 /*

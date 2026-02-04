@@ -33,3 +33,16 @@ const (
 	SignalSell SignalType = "SELL"
 	SignalHold SignalType = "HOLD"
 )
+
+// sanal kasamız.
+type Wallet struct {
+	ID          string  `json:"id"`
+	USDTBalance float64 `json:"usdt_balance"`
+	CoinBalance float64 `json:"coin_balance"`
+}
+
+// cüzdan verisini tasıyacak paket
+type WalletUpdate struct {
+	USDT float64 `json:"usdt"`
+	BTC  float64 `json:"btc"`
+}
